@@ -511,10 +511,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create new <a class="el" href="namespacenbt.html#af736ee28323266257ce0e5d56e2669e0ac3b2486402281a430d49b1a459196c00">TAG_COMPOUND</a> NBT tag. </p><dl class="section warning"><dt>Warning</dt><dd>This function does not support automatic <a class="el" href="classnbt_1_1_tag.html">Tag</a> type conversion, so the value must be a type of <a class="el" href="classnbt_1_1_tag.html">Tag</a>. </dd></dl>
+<p>Create new <a class="el" href="namespacenbt.html#af736ee28323266257ce0e5d56e2669e0ac3b2486402281a430d49b1a459196c00">TAG_COMPOUND</a> NBT tag. </p><div class="fragment"><div class="line">-- Example of creating TAG_COMPOUND</div><div class="line">local nbt = require(&quot;nbt&quot;)</div><div class="line">tagCompound = nbt.newCompound({</div><div class="line">    hello = nbt.newString(&quot;World&quot;),</div><div class="line">    integerValue = nbt.newInt(12345),</div><div class="line">    doublePrecision = nbt.newDouble(math.pi),</div><div class="line">    list = nbt.newList(nbt.TAG_STRING, {&quot;bandori&quot;, &quot;bang&quot;, &quot;dream&quot;, &quot;livesim2&quot;, &quot;over the rainbow&quot;})</div><div class="line">})</div></div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>This function does not support automatic <a class="el" href="classnbt_1_1_tag.html">Tag</a> type conversion, so the value must be a type of <a class="el" href="classnbt_1_1_tag.html">Tag</a>. See example code above on how to create new <a class="el" href="classnbt_1_1_tag.html">Tag</a> with this type. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">error</td><td>thrown if it contains value other than <a class="el" href="classnbt_1_1_tag.html">Tag</a> type. <div class="fragment"><div class="line">-- Example of creating TAG_COMPOUND</div><div class="line">local nbt = require(&quot;nbt&quot;)</div><div class="line">tagCompound = nbt.newCompound({</div><div class="line">    hello = nbt.newString(&quot;World&quot;),</div><div class="line">    integerValue = nbt.newInt(12345),</div><div class="line">    doublePrecision = nbt.newDouble(math.pi),</div><div class="line">    list = nbt.newList(nbt.TAG_STRING, {&quot;bandori&quot;, &quot;bang&quot;, &quot;dream&quot;, &quot;livesim2&quot;, &quot;over the rainbow&quot;})</div><div class="line">})</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">error</td><td>thrown if it contains value other than <a class="el" href="classnbt_1_1_tag.html">Tag</a> type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -800,7 +800,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create new <a class="el" href="namespacenbt.html#af736ee28323266257ce0e5d56e2669e0af86224107e7c82312447a2c56fb05a6f">TAG_BYTE_ARRAY</a> NBT tag value. </p>
+<p>Create new <a class="el" href="namespacenbt.html#af736ee28323266257ce0e5d56e2669e0a655593edca89bc6ed0a2ac5fc33c50c0">TAG_STRING</a> NBT tag value. </p>
 
 </div>
 </div>

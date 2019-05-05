@@ -151,7 +151,7 @@ Tag newDouble(number value, string name = "");
  * \exception error thrown if the array table contains non-number.
  **/
 Tag newByteArray(table value, string name = "");
-/** Create new ::TAG_BYTE_ARRAY NBT tag value. */
+/** Create new ::TAG_STRING NBT tag value. */
 Tag newString(string value, string name = "");
 /**
  * Create new ::TAG_LIST NBT tag with specified \p typeID.
@@ -160,9 +160,6 @@ Tag newString(string value, string name = "");
 Tag newList(TagType typeID, table value, string name = "");
 /**
  * Create new ::TAG_COMPOUND NBT tag.
- * \warning This function does not support automatic Tag type conversion, so the value must be a
- *          type of Tag.
- * \exception error thrown if it contains value other than Tag type.
  * \code{.lua}
  * -- Example of creating TAG_COMPOUND
  * local nbt = require("nbt")
@@ -173,6 +170,9 @@ Tag newList(TagType typeID, table value, string name = "");
  *     list = nbt.newList(nbt.TAG_STRING, {"bandori", "bang", "dream", "livesim2", "over the rainbow"})
  * })
  * \endcode
+ * \warning This function does not support automatic Tag type conversion, so the value must be a
+ *          type of Tag. See example code above on how to create new Tag with this type.
+ * \exception error thrown if it contains value other than Tag type.
  **/
 Tag newCompound(table value, string name = "");
 /**
